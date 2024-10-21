@@ -149,3 +149,28 @@ function buyCart() {
   containerCartActions.classList.add("disabled");
   containerCartBought.classList.remove("disabled");
 }
+
+/*----------------- GO TO INDEX.EJS -----------------*/
+
+const buttons = document.querySelectorAll("#indexBtn");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "/";
+  });
+});
+
+/*----------- SHOW / HIDE GO BACK ICON -------------*/
+
+const currentPage = window.location.href;
+
+function showIcon() {
+  const showArrow = document.getElementById("go-back");
+
+  if (currentPage.includes("cart.ejs") || currentPage.includes("/cart")) {
+    showArrow.classList.add("visible");
+  }
+}
+
+window.onload = showIcon;

@@ -21,9 +21,9 @@
 <body>
     <div class="wrapper">
         <header class="header-mobile">
-            <a href="../views/index.ejs">
+            <button id="indexBtn">
                 <img class="logo" src="/images/logo.png" alt="logo">
-            </a>
+            </button>
             <nav class="menu-mobile" id="menu-mobile">
                 <ul>
                     <li class="menu-line">
@@ -62,10 +62,10 @@
                     </div>
                 </div>
 
-                <a href="../views/cart.ejs" class="res-cart" id="res-cart">
+                <button id="cartBtn" class="res-cart">
                     <i class="ri-shopping-cart-2-fill"></i>
                     <span id="number2" class="res-number">0</span>
-                </a>
+                </button>
 
                 <button class="open-menu" id="open-menu">
                     <i class="ri-menu-line nav_burger"></i>
@@ -73,15 +73,18 @@
                 </button>
 
                 <div class="go-back" id="go-back">
-                    <a href="../views/index.ejs" class="a-back-arrow"><i class="ri-arrow-left-wide-line"></i>Atras</a>
+                    <button id="indexBtn" class="a-back-arrow">
+                        <i class="ri-arrow-left-wide-line"></i>
+                        Atras
+                    </button>
                 </div>
             </div>
         </header>
         <aside>
             <header>
-                <a href="../views/index.ejs">
+                <button id="indexBtn">
                     <img class="logo" src="images/logo.png" alt="logo">
-                </a>
+                </button>
             </header>
             <nav>
                 <ul class="menu" id="menu">
@@ -114,9 +117,11 @@
                         </button>
                     </li>
                     <li>
-                        <a class="btnMenu btn-cart" href="../views/cart.ejs"><i class="ri-shopping-cart-2-fill"></i>Carrito
+                        <button id="cartBtn" class="btnMenu btn-cart">
+                            <i class="ri-shopping-cart-2-fill"></i>
+                            Carrito
                             <span id="number" class="number">0</span>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </nav>

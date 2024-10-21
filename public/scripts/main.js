@@ -253,3 +253,14 @@ goTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+/*----------------- GO TO CART.EJS -----------------*/
+
+const cartButtons = document.querySelectorAll("#cartBtn");
+
+cartButtons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "/cart";
+  });
+});

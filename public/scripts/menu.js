@@ -30,21 +30,19 @@ btnCategory.forEach((boton) => {
 
 const currentPage = window.location.href;
 
-function showMenu() {
+function showMenuIcons() {
   const showMenu = document.getElementById("open-menu");
-  const showCart = document.getElementById("res-cart");
-  const showArrow = document.getElementById("go-back");
+  const showCart = document.querySelector(".res-cart");
   const showSearch = document.getElementById("res_search");
 
-  if (currentPage.includes("index.php") || currentPage.includes("/")) {
+  if (currentPage.includes("index.ejs") || currentPage.includes("/")) {
     showMenu.classList.add("visible");
     showCart.classList.add("visible");
-    showArrow.classList.add("visible");
     showSearch.classList.add("visible");
   }
 }
 
-window.onload = showMenu;
+window.onload = showMenuIcons;
 
 /*----------------- RESPONSIVE NAVBAR TOGGLE ----------------*/
 
@@ -83,4 +81,3 @@ searchInput.addEventListener("focus", function () {
     searchInput.classList.add("slide");
   }
 });
-

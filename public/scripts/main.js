@@ -127,9 +127,9 @@ function openModal(product) {
       <button type="button" class="btn btn-cart-add" id="${product.id}">
           Agregar <i class="fas fa-shopping-cart"></i>
       </button>
-        <a href="./cart.html" type="button" class="atn a-cart-buy">
+        <button id="cartBtn2" type="button" class="btn a-cart-buy">
          Comprar
-       </a>
+       </button>
   </div>
 </div>
   `;
@@ -158,6 +158,7 @@ function openModal(product) {
 
   imgSlider();
   clickAddBtn();
+  setupCartButton();
 }
 
 /*-------------------- ADD TO CART --------------------*/
@@ -264,3 +265,14 @@ cartButtons.forEach((button) => {
     window.location.href = "/cart";
   });
 });
+
+function setupCartButton() {
+  const cartButton = document.getElementById("cartBtn2");
+
+  if (cartButton) {
+    cartButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.location.href = "/cart";
+    });
+  }
+}

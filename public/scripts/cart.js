@@ -108,13 +108,19 @@ function deleteCart(e) {
 btnEmpty.addEventListener("click", emptyCart);
 
 function emptyCart() {
+  const totalProducts = productsCart.reduce(
+    (acc, product) => acc + product.amount,
+    0
+  );
+  const message =
+    totalProducts === 1
+      ? "Se va a borrar 1 producto."
+      : `Se van a borrar ${totalProducts} productos.`;
+
   Swal.fire({
     title: "¿Estás seguro?",
     icon: "question",
-    html: `Se van a borrar ${productsCart.reduce(
-      (acc, product) => acc + product.amount,
-      0
-    )} productos.`,
+    html: message,
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText: "Sí",

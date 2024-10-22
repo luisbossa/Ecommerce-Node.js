@@ -375,17 +375,13 @@ main {
 
 .modal-overlay .modal-content {
   width: 95%;
-  height: 97%;
+  height: auto;
   border-radius: var(--b-radius);
   background-color: var(--clr-whiteish);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   overflow: auto;
   opacity: 0;
-}
-
-.modal-overlay .modal-content::-webkit-scrollbar {
-  width: 0;
 }
 
 .modal-overlay.open .modal-content {
@@ -545,14 +541,14 @@ main {
   display: flex;
   column-gap: 0.5rem;
   align-items: center;
-  padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .close-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem 0.7rem;
+  padding: 0.2rem 0.7rem;
   border-bottom: 1px solid var(--clr-mate);
 }
 
@@ -711,11 +707,19 @@ main {
 
 /* -------------- MEDIA QUERIES --------------*/
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 690px) {
   .modal-overlay .modal-content {
-    max-width: 800px;
+    padding: 1.5rem !important;
+    max-width: 900px;
   }
 
+  .close-wrapper {
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 620px) {
   .product-imgs {
     max-width: 327px;
   }
@@ -732,8 +736,8 @@ main {
 @media screen and (min-width: 500px) {
   .modal-overlay .modal-content {
     display: flex;
+    justify-content: space-between;
     column-gap: 0.8rem;
-    height: auto;
     padding: 1rem;
     overflow: hidden;
     position: relative;

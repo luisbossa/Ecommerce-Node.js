@@ -112,6 +112,10 @@
   flex-direction: column;
 }
 
+.disabled {
+  display: none !important;
+}
+
 /*--------------- RESPONSIVE CART ----------------*/
 
 @media screen and (min-width: 360px) {
@@ -205,10 +209,6 @@
     flex-direction: column-reverse;
     align-items: end;
     row-gap: 0.5rem;
-  }
-
-  .disabled {
-    display: none;
   }
 }
 

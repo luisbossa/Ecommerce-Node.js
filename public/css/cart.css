@@ -13,6 +13,16 @@
   color: var(--clr-aside);
 }
 
+.go-back2 {
+  border: 1px solid var(--clr-whiteish);
+  border-radius: var(--b-radius-xs);
+}
+
+.a-back-arrow2 {
+  color: var(--clr-whiteish);
+  font-size: 1rem;
+}
+
 .cart-products {
   display: flex;
   flex-direction: column;

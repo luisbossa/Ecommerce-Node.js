@@ -13,15 +13,9 @@
   color: var(--clr-aside);
 }
 
-.go-back2 {
-  padding-left: 0 !important;
-  border: 1px solid var(--clr-whiteish);
-  border-radius: var(--b-radius-xs);
-}
-
 .a-back-arrow2 {
   color: var(--clr-whiteish);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .cart-products {

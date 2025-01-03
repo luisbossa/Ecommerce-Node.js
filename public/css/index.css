@@ -524,7 +524,7 @@ main {
 .product-detail ul li {
   margin: 0;
   list-style: none;
-  background: url(/images/check.png) no-repeat;
+  background: url(/images/check.webp) no-repeat;
   background-size: 1.1rem;
   padding-left: 1.7rem;
   margin: 0.4rem 0;

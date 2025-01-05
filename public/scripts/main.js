@@ -46,143 +46,103 @@ function loadProducts(products) {
 /*---------------- MODAL POP UP ----------------*/
 
 function openModal(product) {
-  const modalOverlay = document.querySelector(".modal-overlay");
-  const modalContent = modalOverlay.querySelector(".modal-content");
-
-  modalOverlay.classList.add("open");
-  modalContent.classList.add("open");
-  document.body.style.overflow = "hidden";
-
-  modalContent.innerHTML = `
-  <div class="close-wrapper">
-    <div class="h2-div">
-      <h2 class="product-title2">${product.name}</h2>
-    </div>
-    <span id="close-modal" class="close-modal"><i class="fas fa-times"></i></span>
-  </div>
-  <div class="product-imgs">
-    <div class="img-display">
-        <div class="img-showcase">
-            <img class="img-pop-up" src="${product.image}" alt="${product.name}"> 
-            <img class="img-pop-up" src="${product.image2}" alt="${product.name}"> 
+  // Usamos SweetAlert2 para mostrar el modal
+  Swal.fire({
+    title: product.name,
+    html: `
+      <div class="product-imgs">
+        <div class="img-display">
+          <div class="img-showcase">
+            <img class="img-pop-up" src="${product.image}" alt="${product.name}">
+            <img class="img-pop-up" src="${product.image2}" alt="${product.name}">
             <img class="img-pop-up" src="${product.image3}" alt="${product.name}">
             <img class="img-pop-up" src="${product.image4}" alt="${product.name}">
+          </div>
         </div>
-    </div>
-    <div class="img-select">
-        <div class="img-item">
-            <a href="#" data-id="1">
-                <img class="img-pop-up" src="${product.image}" alt="${product.name}">
-            </a>
+        <div class="img-select">
+          <div class="img-item">
+              <a href="#" data-id="1">
+                  <img class="img-pop-up" src="${product.image}" alt="${product.name}">
+              </a>
+          </div>
+          <div class="img-item">
+              <a href="#" data-id="2">
+                  <img class="img-pop-up" src="${product.image2}" alt="${product.name}">
+              </a>
+          </div>
+          <div class="img-item">
+              <a href="#" data-id="3">
+                  <img class="img-pop-up" src="${product.image3}" alt="${product.name}">
+              </a>
+          </div>
+          <div class="img-item">
+              <a href="#" data-id="4">
+                  <img class="img-pop-up" src="${product.image4}" alt="${product.name}">
+              </a>
+          </div>
         </div>
-        <div class="img-item">
-            <a href="#" data-id="2">
-                <img class="img-pop-up" src="${product.image2}" alt="${product.name}">
-            </a>
-        </div>
-        <div class="img-item">
-            <a href="#" data-id="3">
-                <img class="img-pop-up" src="${product.image3}" alt="${product.name}">
-            </a>
-        </div>
-        <div class="img-item">
-            <a href="#" data-id="4">
-                <img class="img-pop-up" src="${product.image4}" alt="${product.name}">
-            </a>
-        </div>
-    </div>
-</div>
-
-<div class="product-content">
-    <h2 class="product-title">${product.name}</h2>
-
-  <div class="go-back-div" id="go-back-div">
-    <button class="btn back-arrow-modal" id="back-arrow-modal"><i class="ri-arrow-left-wide-line"></i>Atras</button>
-      <div class="product-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-          <span>${product.rate}</span>
       </div>
-  </div>
 
-  <div class="product-price">
-      <p class="new-price">Precio: <span>₡ ${product.price}</span></p>
-  </div>
-  <div class="product-detail">
-      <h3 class="detail">Detalle</h3>
-      <p>${product.description}</p>
-      <ul class="hide-detail">
-          <li>Color: <span>${product.color}</span></li>
-          <li>Disponibilidad: <span>En stock</span></li>
-          <li>Categoría: <span>${product.category.name}</span></li>
-          <li>Zona de envío: <span>${product.country}</span></li>
-          <li>Gasto de envío: <span>Gratis</span></li>
-      </ul>
-  </div>
-
-  <div class="purchase-info">
-      <button type="button" class="btn btn-cart-add" id="${product.id}">
-          Agregar <i class="fas fa-shopping-cart"></i>
-      </button>
-        <button id="cartBtn2" type="button" class="btn a-cart-buy">
-         Comprar
-       </button>
-  </div>
-</div>
-  `;
-
-  const closeButton = modalOverlay.querySelector("#close-modal");
-  closeButton.addEventListener("click", () => {
-    modalOverlay.classList.remove("open");
-    modalContent.classList.remove("open");
-    document.body.style.overflow = "auto";
-  });
-
-  const backModal = modalOverlay.querySelector("#back-arrow-modal");
-  backModal.addEventListener("click", () => {
-    modalOverlay.classList.remove("open");
-    modalContent.classList.remove("open");
-    document.body.style.overflow = "auto";
-  });
-
-  modalOverlay.addEventListener("click", (e) => {
-    if (e.target == modalOverlay) {
-      modalOverlay.classList.remove("open");
-      modalContent.classList.remove("open");
-      document.body.style.overflow = "auto";
+      <div class="product-content">
+        <div class="product-div">
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>${product.rate}</span>
+          </div>
+          <div class="product-price">
+            <p class="new-price">Precio: <span>₡ ${product.price}</span></p>
+          </div>
+        </div>
+        <div class="product-detail">
+          <h3 class="detail">Detalle</h3>
+          <p>${product.description}</p>
+          <ul>
+            <li>Color: <span>${product.color}</span></li>
+            <li>Disponibilidad: <span>En stock</span></li>
+            <li>Categoría: <span>${product.category.name}</span></li>
+            <li>Zona de envío: <span>${product.country}</span></li>
+            <li>Gasto de envío: <span>Gratis</span></li>
+          </ul>
+        </div>
+      </div>
+    `,
+    showCloseButton: true,
+    showCancelButton: true,
+    cancelButtonText: 'Comprar <i class="ri-wallet-fill"></i>',
+    confirmButtonText: 'Agregar <i class="fas fa-shopping-cart"></i>',
+    willOpen: () => {
+      document.body.classList.add("swal2-shown");
+      document.documentElement.classList.add("swal2-shown");
+    },
+    willClose: () => {
+      document.body.classList.remove("swal2-shown");
+      document.documentElement.classList.remove("swal2-shown");
+    },
+    focusConfirm: false,
+    preConfirm: () => {
+      addCart(product);
+      return false; // Esto evita que se cierre el modal automáticamente
+    },
+  }).then((result) => {
+    // Si el usuario hace clic en "Comprar ahora", redirige al carrito
+    if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {
+      window.location.href = "/cart"; // Redirige al carrito
     }
   });
 
-  imgSlider();
-  clickAddBtn();
-  setupCartButton();
+  imgSlider(); // Funcionalidad de la galería de imágenes
+  clickAddBtn(); // Funcionalidad para agregar productos al carrito (si corresponde)
+  setupCartButton(); // Funcionalidad para configurar el botón del carrito
 }
 
 /*-------------------- ADD TO CART --------------------*/
 
-let productsCart;
-
-let productsCartLS = localStorage.getItem("products-in-cart");
-
-if (productsCartLS) {
-  productsCart = JSON.parse(productsCartLS);
-  updateNumber();
-} else {
-  productsCart = [];
-}
-
-function clickAddBtn() {
-  btnAdd = document.querySelectorAll(".btn-cart-add");
-
-  btnAdd.forEach((button) => {
-    button.addEventListener("click", addCart);
-  });
-}
-
-function addCart(e) {
+// Cambié la función para aceptar directamente un `product` en vez de un evento
+function addCart(product) {
   Toastify({
     text: "Producto agregado",
     duration: 2000,
@@ -206,20 +166,36 @@ function addCart(e) {
     onClick: function () {},
   }).showToast();
 
-  const idBtn = e.currentTarget.id;
-  const productAdd = products.find((product) => product.id == idBtn);
-  e.preventDefault();
-
-  if (productsCart.some((product) => product.id == idBtn)) {
-    const index = productsCart.findIndex((product) => product.id == idBtn);
+  // Ahora ya no necesitamos el `preventDefault()`, porque no estamos trabajando con un evento
+  if (productsCart.some((p) => p.id === product.id)) {
+    const index = productsCart.findIndex((p) => p.id === product.id);
     productsCart[index].amount++;
   } else {
-    productAdd.amount = 1;
-    productsCart.push(productAdd);
+    product.amount = 1;
+    productsCart.push(product);
   }
   updateNumber();
-
   localStorage.setItem("products-in-cart", JSON.stringify(productsCart));
+}
+
+/*-------------------- ADD TO CART --------------------*/
+
+let productsCart;
+let productsCartLS = localStorage.getItem("products-in-cart");
+
+if (productsCartLS) {
+  productsCart = JSON.parse(productsCartLS);
+  updateNumber();
+} else {
+  productsCart = [];
+}
+
+function clickAddBtn() {
+  btnAdd = document.querySelectorAll(".btn-cart-add");
+
+  btnAdd.forEach((button) => {
+    button.addEventListener("click", addCart);
+  });
 }
 
 /*----------------- CART COUNT NUMBER -----------------*/

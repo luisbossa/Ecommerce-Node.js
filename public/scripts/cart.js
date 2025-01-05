@@ -127,6 +127,14 @@ function emptyCart() {
     cancelButtonColor: "#3b3e56",
     cancelButtonText: "No",
     confirmButtonColor: "#c0392b",
+    willOpen: () => {
+      document.body.classList.add("swal2-shown");
+      document.documentElement.classList.add("swal2-shown");
+    },
+    willClose: () => {
+      document.body.classList.remove("swal2-shown");
+      document.documentElement.classList.remove("swal2-shown");
+    },
   }).then((result) => {
     if (result.isConfirmed) {
       productsCart.length = 0;

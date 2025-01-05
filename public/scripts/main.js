@@ -45,6 +45,37 @@ function loadProducts(products) {
 
 /*---------------- MODAL POP UP ----------------*/
 
+function imgSlider() {
+  const imgs = document.querySelectorAll(".img-select a");
+  const imgBtns = [...imgs];
+  let imgId = 1;
+
+  imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener("click", (event) => {
+      event.preventDefault();
+      imgId = imgItem.dataset.id;
+      slideImage();
+    });
+  });
+
+  function slideImage() {
+    // Verificar si el .img-showcase existe
+    const showcase = document.querySelector(".img-showcase");
+    if (!showcase) return;
+
+    const firstImg = showcase.querySelector("img:first-child");
+    if (!firstImg) return;
+
+    const displayWidth = firstImg.clientWidth;
+
+    // Mover las imágenes según el id seleccionado
+    showcase.style.transform = `translateX(${-(imgId - 1) * displayWidth}px)`;
+  }
+
+  // Asegurarse de que el slider se ajuste al cambiar el tamaño de la ventana
+  window.addEventListener("resize", slideImage);
+}
+
 function openModal(product) {
   Swal.fire({
     title: product.name,
@@ -121,6 +152,10 @@ function openModal(product) {
       // Deshabilitar el scroll del body al abrir el modal
       document.body.classList.add("modal-open");
     },
+    didOpen: () => {
+      // Ejecutar imgSlider() después de que el modal se haya abierto
+      imgSlider(); // Ahora imgSlider se ejecuta cuando el modal está completamente cargado
+    },
     willClose: () => {
       // Habilitar el scroll del body al cerrar el modal
       document.body.classList.remove("modal-open");
@@ -137,15 +172,7 @@ function openModal(product) {
     }
   });
 
-  document.addEventListener("click", (event) => {
-    // Si el modal está cerrado y el click es fuera del modal, no hacer nada con el slider
-    const modal = document.querySelector(".swal2-container"); // O el selector adecuado para tu modal
-    if (!modal || !modal.classList.contains("swal2-shown")) {
-      return;
-    }
-
-    imgSlider();
-  });
+  // Ejecutar las funciones fuera del contexto del modal
   clickAddBtn();
   setupCartButton();
 }

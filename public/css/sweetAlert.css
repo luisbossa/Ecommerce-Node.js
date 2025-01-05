@@ -60,7 +60,7 @@ div:where(.swal2-container).swal2-center > .swal2-popup .product-imgs {
 
 div:where(.swal2-container).swal2-center > .swal2-popup .img-showcase {
   display: flex;
-  width: 100%;
+  width: 101%;
   transition: all 0.5s ease;
 }
 
@@ -184,17 +184,88 @@ div:where(.swal2-container).swal2-center > .swal2-popup .purchase-info {
   margin-top: 1rem;
 }
 
-.swal2-popup .swal2-confirm {
-  border: 0;
+/* Confirm Button */
+.custom-confirm {
   border-radius: 0.25em;
   text-transform: uppercase;
-  background: var(--clr-shine-blue);
   color: var(--clr-white);
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
+    url("/images/bg02.webp");
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+    inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  background: var(--clr-shine-blue);
+  cursor: pointer;
 }
 
-.swal2-popup .swal2-cancel {
+.custom-confirm:hover {
+  background: var(--clr-shine-blue) !important;
+}
+
+/* Cancel Button */
+.custom-cancel {
   text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
+    url("/images/bg02.webp");
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+    inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
   background: var(--clr-shine-aside);
+  cursor: pointer;
+}
+
+.custom-cancel:hover {
+  background: var(--clr-shine-aside) !important;
 }
 
 .swal2-popup .swal2-close {

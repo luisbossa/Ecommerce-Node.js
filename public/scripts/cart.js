@@ -60,7 +60,7 @@ function loadProductsCart() {
 
       <button class="cart-product-delete" id="${
         product.id
-      }"><i class="ri-close-circle-fill"></i></button>
+      }"><i class="ri-close-circle-fill c"></i></button>
             `;
 
       containerCartProducts.append(div);

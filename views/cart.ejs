@@ -108,10 +108,43 @@
                 <h2 class="cart-main-title">Carrito</h2>
             </div>
             <div class="container-cart">
-                <p id="empty-comment" class="empty-comment">
-                    El carrito está vacío.
-                    <i class="far fa-frown-open"></i>
-                </p>
+                <div id="empty-comment" class="empty-comment">
+
+                    <div class="empty-container">
+                        <div class="heading-right">
+                            <div class="wizard-circles">
+                                <!-- barra wizard -->
+                                <ul class="wizard-steps">
+                                    <li data-target="#step1" class="active">
+                                        <span class="step">1</span>
+                                    </li>
+
+                                    <li data-target="#step2" class="">
+                                        <span class="step">2</span>
+                                    </li>
+
+                                    <li data-target="#step3" class="">
+                                        <span class="step">3</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="wizzars-heading">Por favor revisa tu carrito de Compras</span>
+                        </div>
+                        <div class="no-products">
+                            <div class="empty-wrap">
+                                <i class="empty-cart fa fa-cart-arrow-down"></i>
+                                <div class="empty-heading">
+                                    ¡Su carrito esta vacío!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns-emptyCart-div">
+                            <button type="button" id="indexBtn" class="btn btn-b">Ir a
+                                Comprar <i class="ri-shopping-cart-2-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
                 <div id="cart-products" class="cart-products disabled">
                     <!-- JS -->

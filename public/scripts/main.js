@@ -46,7 +46,6 @@ function loadProducts(products) {
 /*---------------- MODAL POP UP ----------------*/
 
 function openModal(product) {
-  // Usamos SweetAlert2 para mostrar el modal
   Swal.fire({
     title: product.name,
     html: `
@@ -114,6 +113,10 @@ function openModal(product) {
     showCancelButton: true,
     cancelButtonText: 'Comprar <i class="ri-wallet-fill"></i>',
     confirmButtonText: 'Agregar <i class="fas fa-shopping-cart"></i>',
+    customClass: {
+      confirmButton: "custom-confirm",
+      cancelButton: "custom-cancel",
+    },
     willOpen: () => {
       document.body.classList.add("swal2-shown");
       document.documentElement.classList.add("swal2-shown");
@@ -128,15 +131,14 @@ function openModal(product) {
       return false; // Esto evita que se cierre el modal automáticamente
     },
   }).then((result) => {
-    // Si el usuario hace clic en "Comprar ahora", redirige al carrito
     if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {
-      window.location.href = "/cart"; // Redirige al carrito
+      window.location.href = "/cart";
     }
   });
 
-  imgSlider(); // Funcionalidad de la galería de imágenes
-  clickAddBtn(); // Funcionalidad para agregar productos al carrito (si corresponde)
-  setupCartButton(); // Funcionalidad para configurar el botón del carrito
+  imgSlider();
+  clickAddBtn();
+  setupCartButton();
 }
 
 /*-------------------- ADD TO CART --------------------*/

@@ -30,16 +30,17 @@
   --clr-shine-red: linear-gradient(to left, #ed213a, #93291e);
 }
 
-body.swal2-shown,
-html.swal2-shown {
-  overflow: hidden;
+/* Deshabilitar el scroll del body cuando el modal está abierto */
+body.modal-open {
+  overflow: hidden;  /* Deshabilita el scroll */
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup {
   width: 1100px;
+  max-height: 95vh; 
   padding: var(--space-unit);
   padding-bottom: var(--space-twounits);
-  overflow: auto;
+  overflow: hidden;
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .swal2-html-container {

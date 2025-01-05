@@ -337,6 +337,84 @@
   color: var(--clr-aside);
 }
 
+.custom-confirm-btn {
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
+    url("/images/bg02.webp");
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+    inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  background: var(--clr-shine-red);
+  transition: none !important;
+}
+
+.custom-confirm-btn:hover {
+  background: var(--clr-shine-red) !important;
+}
+
+.custom-cancel-btn {
+  outline: 0;
+  border: 0;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: -ms-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("/images/bg02.webp");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.35)),
+    url("/images/bg02.webp");
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35),
+    inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
+  transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  background: var(--clr-shine-aside);
+  transition: none !important;
+}
+
+.custom-cancel-btn:hover {
+  background: var(--clr-shine-aside) !important;
+}
+
 /*--------------- RESPONSIVE CART ----------------*/
 
 @media screen and (min-width: 360px) {

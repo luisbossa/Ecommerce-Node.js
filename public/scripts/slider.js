@@ -1,25 +1,20 @@
-function imgSlider() {
-  const imgs = document.querySelectorAll(".img-select a");
-  const imgBtns = [...imgs];
-  let imgId = 1;
+function slideImage() {
+  // Verifica si el contenedor y la primera imagen existen
+  const showcase = document.querySelector(".img-showcase");
+  if (showcase) {
+    const firstImage = showcase.querySelector("img:first-child");
 
-  imgBtns.forEach((imgItem) => {
-    imgItem.addEventListener("click", (event) => {
-      event.preventDefault();
-      imgId = imgItem.dataset.id;
-      slideImage();
-    });
-  });
+    // Verifica si la primera imagen existe antes de intentar acceder a su propiedad clientWidth
+    if (firstImage) {
+      const displayWidth = firstImage.clientWidth;
 
-  function slideImage() {
-    const displayWidth = document.querySelector(
-      ".img-showcase img:first-child"
-    ).clientWidth;
-
-    document.querySelector(".img-showcase").style.transform = `translateX(${
-      -(imgId - 1) * displayWidth
-    }px)`;
+      showcase.style.transform = `translateX(${
+        -(imgId - 1) * displayWidth
+      }px)`;
+    } else {
+      console.warn("No se pudo encontrar la primera imagen en .img-showcase.");
+    }
+  } else {
+    console.warn(".img-showcase no se encontró en el DOM.");
   }
-
-  window.addEventListener("resize", slideImage);
 }

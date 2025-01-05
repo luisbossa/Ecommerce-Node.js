@@ -118,13 +118,14 @@ function openModal(product) {
       cancelButton: "custom-cancel",
     },
     willOpen: () => {
-      document.body.classList.add("swal2-shown");
-      document.documentElement.classList.add("swal2-shown");
+      // Deshabilitar el scroll del body al abrir el modal
+      document.body.classList.add("modal-open");
     },
     willClose: () => {
-      document.body.classList.remove("swal2-shown");
-      document.documentElement.classList.remove("swal2-shown");
+      // Habilitar el scroll del body al cerrar el modal
+      document.body.classList.remove("modal-open");
     },
+    scrollbarPadding: false,
     focusConfirm: false,
     preConfirm: () => {
       addCart(product);
@@ -136,7 +137,15 @@ function openModal(product) {
     }
   });
 
-  imgSlider();
+  document.addEventListener("click", (event) => {
+    // Si el modal está cerrado y el click es fuera del modal, no hacer nada con el slider
+    const modal = document.querySelector(".swal2-container"); // O el selector adecuado para tu modal
+    if (!modal || !modal.classList.contains("swal2-shown")) {
+      return;
+    }
+
+    imgSlider();
+  });
   clickAddBtn();
   setupCartButton();
 }

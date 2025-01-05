@@ -124,9 +124,11 @@ function emptyCart() {
     showCancelButton: true,
     focusConfirm: false,
     confirmButtonText: "Sí",
-    cancelButtonColor: "#3b3e56",
     cancelButtonText: "No",
-    confirmButtonColor: "#c0392b",
+    customClass: {
+      confirmButton: 'custom-confirm-btn',
+      cancelButton: 'custom-cancel-btn',
+    },
     willOpen: () => {
       document.body.classList.add("swal2-shown");
       document.documentElement.classList.add("swal2-shown");

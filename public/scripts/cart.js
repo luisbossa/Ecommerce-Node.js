@@ -1,4 +1,4 @@
-let companyName = "BCompany";
+let companyName = "BStudio";
 
 let productsCart = localStorage.getItem("products-in-cart");
 productsCart = JSON.parse(productsCart);

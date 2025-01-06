@@ -98,7 +98,7 @@
 }
 
 .cart-title {
-  color: var(--clr-red);
+  color: var(--clr-blue);
   font-size: 0.9rem;
 }
 
@@ -175,8 +175,8 @@
   align-items: end;
 }
 
-.heading-right {
-  width: 310px;
+.heading-right-div {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,9 +190,11 @@
 
 .wizzars-heading {
   height: 100%;
+  font-size: 1.1rem;
   font-weight: bolder;
-  font-size: 1rem;
   text-align: right;
+  margin-bottom: var(--space-twounits);
+  padding-right: var(--space-unit);
   color: var(--clr-aside);
 }
 
@@ -211,8 +213,7 @@
   flex-wrap: wrap-reverse;
   align-items: center;
   justify-content: start;
-  padding: var(--space-fourunits) var(--space-unit) var(--space-fourunits)
-    var(--space-threeunits);
+  padding: var(--space-fourunits) var(--space-unit) 0 var(--space-threeunits);
   gap: var(--space-twounits);
 }
 
@@ -271,12 +272,12 @@
 
 /*wizard pasos*/
 .wizard-steps {
-  list-style: none;
-  display: block;
   width: 100%;
+  display: block;
+  position: relative;
   padding: 0;
   margin: 0;
-  position: relative;
+  list-style: none;
 }
 
 .wizard-steps li {
@@ -304,7 +305,7 @@
 .wizard-steps li:before {
   display: block;
   content: "";
-  width: 70px;
+  width: 130px;
   height: 1px;
   font-size: 0;
   overflow: hidden;
@@ -316,12 +317,12 @@
 
 .wizard-steps li:last-child:before {
   max-width: 50%;
-  width: 70px;
+  width: 130px;
 }
 
 .wizard-steps li:first-child:before {
-  max-width: 29%;
-  left: 50px;
+  max-width: 46%;
+  left: 80px;
 }
 
 .wizard-steps li.active:before,
@@ -335,6 +336,19 @@
 .wizard-steps li.complete .title,
 .wizard-steps li.active .title {
   color: var(--clr-aside);
+}
+
+.wizard-step-div {
+  display: flex;
+  color: var(--clr-aside);
+  font-weight: 500;
+  margin-bottom: var(--space-twounits);
+  gap: 40px;
+}
+
+.wizzard-step-title {
+  width: 100px;
+  text-align: center;
 }
 
 .custom-confirm-btn {
@@ -615,5 +629,36 @@
 
   .btn-b {
     font-size: 0.7rem;
+  }
+
+  .heading-right-div {
+    width: 100%;
+    align-items: center;
+  }
+
+  .wizard-steps li:before {
+    width: 90px;
+  }
+
+  .wizard-steps li:last-child:before {
+    width: 90px;
+  }
+
+  .wizard-steps li:first-child:before {
+    max-width: 46%;
+    left: 50px;
+  }
+
+  .wizard-step-div {
+    gap: 3px;
+  }
+
+  .wizzars-heading {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .wizzard-step-title {
+    font-size: 0.9rem;
   }
 }

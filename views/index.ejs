@@ -26,30 +26,30 @@
             <button id="indexBtn">
                 <img class="logo" src="/images/logo.webp" alt="logo">
             </button>
-            <nav class="menu-mobile" id="menu-mobile">
-                <ul>
-                    <li class="menu-line">
-                        <button id="all" class="btn-menu-mobile btn-category">
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="nav-item">
+                        <button id="all" class="btn-menu-mobile btn-category" data-nav-link>
                             Productos varios
                         </button>
                     </li>
-                    <li class="menu-line">
-                        <button id="shirts" class="btn-menu-mobile btn-category">
+                    <li class="nav-item">
+                        <button id="shirts" class="btn-menu-mobile btn-category" data-nav-link>
                             Camisetas
                         </button>
                     </li>
-                    <li class="menu-line">
-                        <button id="coats" class="btn-menu-mobile btn-category">
+                    <li class="nav-item">
+                        <button id="coats" class="btn-menu-mobile btn-category" data-nav-link>
                             Abrigos
                         </button>
                     </li>
-                    <li class="menu-line">
-                        <button id="pants" class="btn-menu-mobile btn-category">
+                    <li class="nav-item">
+                        <button id="pants" class="btn-menu-mobile btn-category" data-nav-link>
                             Pantalones
                         </button>
                     </li>
-                    <li>
-                        <button id="shoes" class="btn-menu-mobile btn-category">
+                    <li class="nav-item">
+                        <button id="shoes" class="btn-menu-mobile btn-category" data-nav-link>
                             Zapatos
                         </button>
                     </li>
@@ -69,10 +69,13 @@
                     <span id="number2" class="res-number">0</span>
                 </button>
 
-                <button class="open-menu" id="open-menu">
-                    <i class="ri-menu-line nav_burger"></i>
-                    <i class="ri-close-large-fill nav_close"></i>
-                </button>
+                <div class="header-btn-group" id="header-btn-group">
+                    <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                        <span class="line top"></span>
+                        <span class="line middle"></span>
+                        <span class="line bottom"></span>
+                    </button>
+                </div>
 
                 <div class="go-back" id="go-back">
                     <button id="indexBtn" class="a-back-arrow">

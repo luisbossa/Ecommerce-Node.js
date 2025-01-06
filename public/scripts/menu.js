@@ -31,7 +31,7 @@ btnCategory.forEach((boton) => {
 const currentPage = window.location.href;
 
 function showMenuIcons() {
-  const showMenu = document.getElementById("open-menu");
+  const showMenu = document.getElementById("header-btn-group");
   const showCart = document.querySelector(".res-cart");
   const showSearch = document.getElementById("res_search");
 
@@ -46,7 +46,7 @@ window.onload = showMenuIcons;
 
 /*----------------- RESPONSIVE NAVBAR TOGGLE ----------------*/
 
-const openMenu = (toggleId, navId) => {
+/*const openMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId);
   const nav = document.getElementById(navId);
   const menuItems = nav.querySelectorAll("li");
@@ -72,7 +72,27 @@ const openMenu = (toggleId, navId) => {
   });
 };
 
-openMenu("open-menu", "menu-mobile");
+openMenu("open-menu", "menu-mobile");*/
+
+"use strict";
+
+/* navbar toggle */
+
+const navbar = document.querySelector("[data-navbar]");
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
+const menuToggleBtn = document.querySelector("[data-menu-toggle-btn]");
+
+menuToggleBtn.addEventListener("click", function () {
+  navbar.classList.toggle("active");
+  this.classList.toggle("active");
+});
+
+for (let i = 0; i < navbarLinks.length; i++) {
+  navbarLinks[i].addEventListener("click", function () {
+    navbar.classList.toggle("active");
+    menuToggleBtn.classList.toggle("active");
+  });
+}
 
 /*----------------- RESPONSIVE SEARCH BAR SLIDER ----------------*/
 

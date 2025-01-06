@@ -142,8 +142,8 @@ function openModal(product) {
     `,
     showCloseButton: true,
     showCancelButton: true,
-    cancelButtonText: 'Comprar <i class="ri-wallet-fill"></i>',
-    confirmButtonText: 'Agregar <i class="fas fa-shopping-cart"></i>',
+    cancelButtonText: 'Carrito <i class="fas fa-shopping-cart"></i>',
+    confirmButtonText: 'Comprar <i class="ri-wallet-fill"></i>',
     customClass: {
       confirmButton: "custom-confirm",
       cancelButton: "custom-cancel",

@@ -24,9 +24,10 @@ function loadProductsCart() {
       const div = document.createElement("div");
       div.classList.add("cart-product");
       div.innerHTML = `
-         <img class="cart-product-img" src="${product.image}" alt="${
-        product.name
-      }">
+      <picture>
+        <source srcset="${product.image}" type="image/webp">
+        <img class="cart-product-img" src="${product.image}" alt="${product.name}">
+      </picture>
       
     <div class="cart-content-div">
         <div class="cart-product-title">

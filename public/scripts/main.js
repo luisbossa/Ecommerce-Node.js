@@ -23,14 +23,14 @@ function loadProducts(products) {
           <div class="contenedor-img">
           <i class="fas fa-expand btn-expand"></i>
           
-<picture>
-  <source srcset="${product.image}" type="image/webp">
-  <img class="producto-imagen" 
-       src="${product.image}" 
-       alt="${product.name}" 
-       width="387" 
-       height="490">
-</picture>
+          <picture>
+            <source srcset="${product.image}" type="image/webp">
+            <img class="producto-imagen" 
+                src="${product.image}" 
+                alt="${product.name}" 
+                width="387" 
+                height="490">
+          </picture>
 
           </div>
           <div class="producto-detalles">
@@ -83,37 +83,61 @@ function openModal(product) {
   Swal.fire({
     title: product.name,
     html: `
-          <div class="product-imgs">
-        <div class="img-display">
-            <div class="img-showcase">
-                <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
-                <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
-                <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
-                <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
-            </div>
+    <div class="product-imgs">
+      <div class="img-display">
+        <div class="img-showcase">
+          <picture>
+            <source srcset="${product.image}" type="image/webp">
+            <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
+          </picture>
+          <picture>
+            <source srcset="${product.image2}" type="image/webp">
+            <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
+          </picture>
+          <picture>
+            <source srcset="${product.image3}" type="image/webp">
+            <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
+          </picture>
+          <picture>
+            <source srcset="${product.image4}" type="image/webp">
+            <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
+          </picture>
         </div>
-        <div class="img-select">
-            <div class="img-item">
-                <a href="#" data-id="1">
-                    <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
-                </a>
-            </div>
-            <div class="img-item">
-                <a href="#" data-id="2">
-                    <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
-                </a>
-            </div>
-            <div class="img-item">
-                <a href="#" data-id="3">
-                    <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
-                </a>
-            </div>
-            <div class="img-item">
-                <a href="#" data-id="4">
-                    <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
-                </a>
-            </div>
+      </div>
+      <div class="img-select">
+        <div class="img-item">
+          <a href="#" data-id="1">
+            <picture>
+              <source srcset="${product.image}" type="image/webp">
+              <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
+            </picture>
+          </a>
         </div>
+        <div class="img-item">
+          <a href="#" data-id="2">
+            <picture>
+              <source srcset="${product.image2}" type="image/webp">
+              <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
+            </picture>
+          </a>
+        </div>
+        <div class="img-item">
+          <a href="#" data-id="3">
+            <picture>
+              <source srcset="${product.image3}" type="image/webp">
+              <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
+            </picture>
+          </a>
+        </div>
+        <div class="img-item">
+          <a href="#" data-id="4">
+            <picture>
+              <source srcset="${product.image4}" type="image/webp">
+              <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
+            </picture>
+          </a>
+        </div>
+      </div>
     </div>
 
     <div class="product-content">

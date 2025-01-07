@@ -25,7 +25,7 @@ function loadProducts(products) {
           <img class="producto-imagen" src="${product.image}" alt="${product.name}" width="300" height="auto" loading="lazy">
           </div>
           <div class="producto-detalles">
-              <h4 class="producto-titulo">${product.name}</h4>
+              <h3 class="producto-titulo">${product.name}</h3>
               <p class="producto-precio">₡ ${product.price}</p>
           </div>
           `;

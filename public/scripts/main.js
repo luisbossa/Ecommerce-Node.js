@@ -22,12 +22,7 @@ function loadProducts(products) {
     div.innerHTML = `
           <div class="contenedor-img">
           <i class="fas fa-expand btn-expand"></i>
-          <img class="producto-imagen"
-     srcset="${product.image}?format=webp 1x, ${product.image}?format=webp&w=600 2x"
-     src="${product.image}" 
-     alt="${product.name}" 
-     width="387" 
-     height="490">
+          <img class="producto-imagen" src="${product.image}" alt="${product.name}" width="274" height="347">
           </div>
           <div class="producto-detalles">
               <h3 class="producto-titulo">${product.name}</h3>
@@ -274,3 +269,4 @@ cartButtons.forEach((button) => {
     window.location.href = "/cart";
   });
 });
+

@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tu tienda en línea de ropa y accesorios. Encuentra productos de moda con envío rápido.">
+    <meta name="keywords" content="ropa, moda, camisetas, abrigos, pantalones, zapatos">
+    <meta name="Luis Bossa" content="Elexir">
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
     <!-- Cargar estilos no críticos de manera diferida -->
@@ -18,23 +22,14 @@
     <link rel="stylesheet" href="/css/cart.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">
 
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-        <link rel="stylesheet" href="/css/sweetAlert.css">
-        <link rel="stylesheet" href="/css/cart.css">
-        <link rel="stylesheet" href="/css/index.css">
-    </noscript>
-
-    <title>Tienda online</title>
+    <title>Tu Tienda en Línea</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header-mobile">
-            <button type="button" role="button" id="indexBtn">
-                <img class="logo" src="/images/logo.webp" alt="logo" width="150" height="50">
+            <button type="button">
+                <img class="logo" src="/images/logo.webp" alt="Logo de la tienda" width="150" height="50">
             </button>
             <nav class="navbar" data-navbar>
                 <ul class="navbar-list">
@@ -71,21 +66,20 @@
             </nav>
             <div class="header-wrap">
                 <div class="res-search-box">
-                    <input type="text" class="input" id="res-input" placeholder="Buscar..">
-
-                    <div class="res_search" id="res_search">
+                    <input type="text" class="input" id="res-input" placeholder="Buscar.."
+                        aria-label="Buscar productos">
+                    <div class="res_search" id="res_search" aria-label="Iniciar búsqueda">
                         <i class="ri-search-line"></i>
                     </div>
                 </div>
 
-                <button type="button" role="button" id="cartBtn" class="res-cart">
+                <button type="button" id="cartBtn" class="res-cart" aria-label="Ir al carrito de compras">
                     <i class="ri-shopping-cart-2-fill"></i>
                     <span id="number2" class="res-number">0</span>
                 </button>
 
                 <div class="header-btn-group" id="header-btn-group">
-                    <button type="button" role="button" class="nav-toggle-btn" aria-label="Toggle Menu"
-                        data-menu-toggle-btn>
+                    <button type="button" class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
                         <span class="line top"></span>
                         <span class="line middle"></span>
                         <span class="line bottom"></span>
@@ -93,7 +87,7 @@
                 </div>
 
                 <div class="go-back" id="go-back">
-                    <button type="button" role="button" id="indexBtn" class="a-back-arrow">
+                    <button type="button" id="indexBtn" aria-label="Volver a la página anterior" class="a-back-arrow">
                         <i class="ri-arrow-left-wide-line"></i>
                         Atras
                     </button>
@@ -102,8 +96,8 @@
         </header>
         <aside>
             <header>
-                <button id="indexBtn">
-                    <img class="logo" src="images/logo.webp" alt="logo" width="150" height="50">
+                <button>
+                    <img class="logo" src="/images/logo.webp" alt="Logo de la tienda" width="150" height="50">
                 </button>
             </header>
 

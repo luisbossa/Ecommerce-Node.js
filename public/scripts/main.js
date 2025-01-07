@@ -165,7 +165,6 @@ function openModal(product) {
 
   // Ejecutar las funciones fuera del contexto del modal
   clickAddBtn();
-  setupCartButton();
 }
 
 /*-------------------- ADD TO CART --------------------*/

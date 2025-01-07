@@ -19,16 +19,29 @@ function loadProducts(products) {
   products.forEach((product) => {
     const div = document.createElement("div");
     div.classList.add("product");
+    
+    const imageSmall = `${product.image}?size=480`; // Imagen pequeña
+    const imageMedium = `${product.image}?size=800`; // Imagen mediana
+    const imageLarge = `${product.image}?size=1200`; // Imagen grande
+
     div.innerHTML = `
-          <div class="contenedor-img">
-          <i class="fas fa-expand btn-expand"></i>
-          <img class="producto-imagen" src="${product.image}" alt="${product.name}" width="387" height="490">
-          </div>
-          <div class="producto-detalles">
-              <h3 class="producto-titulo">${product.name}</h3>
-              <p class="producto-precio">₡ ${product.price}</p>
-          </div>
-          `;
+      <div class="contenedor-img">
+        <i class="fas fa-expand btn-expand"></i>
+        <img class="producto-imagen" 
+             srcset="${imageSmall} 480w, ${imageMedium} 800w, ${imageLarge} 1200w" 
+             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
+             src="${product.image}" 
+             alt="${product.name}" 
+             width="387" 
+             height="490" 
+             loading="lazy">
+      </div>
+      <div class="producto-detalles">
+          <h3 class="producto-titulo">${product.name}</h3>
+          <p class="producto-precio">₡ ${product.price}</p>
+      </div>
+    `;
+    
     productContainer.append(div);
 
     div.addEventListener("click", () => {

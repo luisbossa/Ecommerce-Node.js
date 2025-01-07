@@ -57,7 +57,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--clr-mate);
+  color: var(--clr-white);
 }
 
 button {
@@ -76,6 +76,8 @@ small {
 }
 
 .main-header {
+  width: auto;
+  height: 37px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -254,11 +256,7 @@ aside {
 }
 
 .navbar.active {
-  height: 210px;
-}
-
-.nav-item:not(:last-child) {
-  border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
+  height: 235px;
 }
 
 /*---------------------------------------------------------*/
@@ -335,15 +333,23 @@ main {
 
 .productContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-column-gap: 1rem;
   grid-row-gap: 1.3rem;
 }
 
 .product {
+  width: 100%; 
+  max-width: 300px;
   border-radius: var(--b-radius);
   border: 1px solid var(--clr-mate);
+  align-items: center;
+  margin: 0 auto;
   cursor: pointer;
+}
+
+.producto-titulo {
+  font-size: 1rem;
 }
 
 .producto-imagen {
@@ -351,12 +357,18 @@ main {
   height: auto;
   border-top-left-radius: var(--b-radius);
   border-top-right-radius: var(--b-radius);
+  object-fit: cover; /* Controla cómo la imagen se adapta dentro de su contenedor */
   cursor: pointer;
 }
 
+.contenedor-img {
+  position: relative;
+}
+
 .btn-expand {
-  margin-top: 1rem;
-  margin-left: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   font-size: 1rem;
   color: var(--clr-mate);
   cursor: pointer;

@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" media="print"
         onload="this.media='all'">
 
-    <!-- Cargar CSS de manera diferida para Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        media="print" onload="this.media='all'">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@300;400&display=swap"
+        as="style" />
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js@1.9.3/src/toastify.min.css" media="print"
         onload="this.media='all'">
@@ -39,23 +40,28 @@
             </button>
             <nav class="navbar" data-navbar>
                 <ul class="navbar-list">
-                    <li class="nav-item btn-menu-mobile btn-category" id="all" data-nav-link role="button" aria-label="Mostrar todos los productos">
+                    <li class="nav-item btn-menu-mobile btn-category" id="all" data-nav-link role="button"
+                        aria-label="Mostrar todos los productos">
                         <a href="#" class="nav-link">Productos varios</a>
                     </li>
-                    <li class="nav-item btn-menu-mobile btn-category" id="shirts" data-nav-link role="button" aria-label="Mostrar camisetas">
+                    <li class="nav-item btn-menu-mobile btn-category" id="shirts" data-nav-link role="button"
+                        aria-label="Mostrar camisetas">
                         <a href="#" class="nav-link">Camisetas</a>
                     </li>
-                    <li class="nav-item btn-menu-mobile btn-category" id="coats" data-nav-link role="button" aria-label="Mostrar abrigos">
+                    <li class="nav-item btn-menu-mobile btn-category" id="coats" data-nav-link role="button"
+                        aria-label="Mostrar abrigos">
                         <a href="#" class="nav-link">Abrigos</a>
                     </li>
-                    <li class="nav-item btn-menu-mobile btn-category" id="pants" data-nav-link role="button" aria-label="Mostrar pantalones">
+                    <li class="nav-item btn-menu-mobile btn-category" id="pants" data-nav-link role="button"
+                        aria-label="Mostrar pantalones">
                         <a href="#" class="nav-link">Pantalones</a>
                     </li>
-                    <li class="nav-item btn-menu-mobile btn-category" id="shoes" data-nav-link role="button" aria-label="Mostrar zapatos">
+                    <li class="nav-item btn-menu-mobile btn-category" id="shoes" data-nav-link role="button"
+                        aria-label="Mostrar zapatos">
                         <a href="#" class="nav-link">Zapatos</a>
                     </li>
-                </ul>                
-            </nav>            
+                </ul>
+            </nav>
             <div class="header-wrap">
                 <div class="res-search-box">
                     <input type="text" class="input" id="res-input" placeholder="Buscar.."

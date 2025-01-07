@@ -340,7 +340,7 @@ main {
 
 .product {
   width: 100%; 
-  max-width: 300px;
+  max-width: 274px;
   border-radius: var(--b-radius);
   border: 1px solid var(--clr-mate);
   align-items: center;

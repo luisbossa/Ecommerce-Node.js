@@ -22,7 +22,7 @@ function loadProducts(products) {
     div.innerHTML = `
           <div class="contenedor-img">
           <i class="fas fa-expand btn-expand"></i>
-          <img class="producto-imagen" src="${product.image}" alt="${product.name}" width="300" height="340" loading="lazy">
+          <img class="producto-imagen" src="${product.image}" alt="${product.name}" width="387" height="420" loading="lazy">
           </div>
           <div class="producto-detalles">
               <h3 class="producto-titulo">${product.name}</h3>

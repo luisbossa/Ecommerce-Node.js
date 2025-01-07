@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="all">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" media="all">
+    <!-- Pre-cargar el archivo de CSS crítico -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" as="style" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" as="style" />
+
     <link rel="stylesheet" href="/css/sweetAlert.css" media="all">
     <link rel="stylesheet" href="/css/cart.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">

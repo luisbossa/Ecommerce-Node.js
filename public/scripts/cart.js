@@ -51,11 +51,12 @@ function loadProductsCart() {
       </div>
     </div>
 
-      <button type="button" role="button" class="cart-product-delete" id="${
-        product.id
-      }"><i class="ri-close-circle-fill c"></i></button>
+    <button type="button" class="cart-product-delete" id="${
+      product.id
+    }" aria-label="Eliminar producto del carrito">
+      <i class="ri-close-circle-fill c" aria-hidden="true"></i>
+    </button>
             `;
-
       containerCartProducts.append(div);
     });
 

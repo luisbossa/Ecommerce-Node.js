@@ -1,6 +1,5 @@
-// Import packages
 const express = require("express");
-const ejsLayouts = require('express-ejs-layouts');
+const ejsLayouts = require("express-ejs-layouts");
 const path = require("path");
 const cors = require("cors");
 
@@ -14,7 +13,13 @@ app.use(cors());
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(express.static(path.join(__dirname, "public")));
+// Servir archivos estáticos con caché
+app.use(
+  express.static(path.join(__dirname, "public"), {
+    maxAge: "1y", // Cache durante 1 año
+    etag: false,
+  })
+);
 
 // Routes
 app.use(require("./routes/indexRoute"));
@@ -24,5 +29,5 @@ app.use(require("./routes/cartRoute"));
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`port runing in http://localhost:${port}`);
+  console.log(`port running in http://localhost:${port}`);
 });

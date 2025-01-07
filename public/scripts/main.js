@@ -83,31 +83,31 @@ function openModal(product) {
           <div class="product-imgs">
         <div class="img-display">
             <div class="img-showcase">
-                <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="500" height="500">
-                <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="500" height="500">
-                <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="500" height="500">
-                <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="500" height="500">
+                <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
+                <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
+                <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
+                <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
             </div>
         </div>
         <div class="img-select">
             <div class="img-item">
                 <a href="#" data-id="1">
-                    <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="100" height="100">
+                    <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="387" height="490">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="2">
-                    <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="100" height="100">
+                    <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="387" height="490">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="3">
-                    <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="100" height="100">
+                    <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="387" height="490">
                 </a>
             </div>
             <div class="img-item">
                 <a href="#" data-id="4">
-                    <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="100" height="100">
+                    <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="387" height="490">
                 </a>
             </div>
         </div>

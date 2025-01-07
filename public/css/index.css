@@ -109,7 +109,8 @@ small {
 /*----------------- ASIDE -----------------*/
 
 .logo {
-  width: 10em;
+  width: 50px;
+  height: 40px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
 }
 

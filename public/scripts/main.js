@@ -22,15 +22,17 @@ function loadProducts(products) {
     div.innerHTML = `
           <div class="contenedor-img">
           <i class="fas fa-expand btn-expand"></i>
-          <picture>
-  <source srcset="${product.image}" type="image/webp">
-  <img class="producto-imagen" 
-       src="${product.image}" 
-       alt="${product.name}" 
-       width="387" 
-       height="490">
-</picture>
-
+          <img class="producto-imagen" 
+     src="${product.image}" 
+     alt="${product.name}" 
+     width="387" 
+     height="490" 
+     srcset="${product.image}?w=300 300w, 
+             ${product.image}?w=600 600w, 
+             ${product.image}?w=900 900w" 
+     sizes="(max-width: 600px) 300px, 
+            (max-width: 1200px) 600px, 
+            900px">
           </div>
           <div class="producto-detalles">
               <h3 class="producto-titulo">${product.name}</h3>

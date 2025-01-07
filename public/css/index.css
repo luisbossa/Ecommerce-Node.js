@@ -348,6 +348,7 @@ main {
 
 .producto-imagen {
   width: 100%;
+  height: auto;
   border-top-left-radius: var(--b-radius);
   border-top-right-radius: var(--b-radius);
   cursor: pointer;
@@ -700,7 +701,7 @@ main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   aside {
     display: none;
   }

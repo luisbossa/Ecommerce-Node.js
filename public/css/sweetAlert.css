@@ -32,12 +32,12 @@
 
 /* Deshabilitar el scroll del body cuando el modal está abierto */
 body.modal-open {
-  overflow: hidden;  /* Deshabilita el scroll */
+  overflow: hidden; /* Deshabilita el scroll */
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup {
   width: 1100px;
-  max-height: 95vh; 
+  max-height: 95vh;
   padding: var(--space-unit);
   padding-bottom: var(--space-twounits);
   overflow: hidden;
@@ -365,6 +365,10 @@ div:where(.swal2-container).swal2-center > .swal2-popup .purchase-info {
   div:where(.swal2-container).swal2-center > .swal2-popup .product-detail,
   div:where(.swal2-container).swal2-center > .swal2-popup .product-detail ul {
     display: none;
+  }
+
+  div:where(.swal2-container).swal2-center > .swal2-popup .product-rating {
+    font-size: 0.8rem;
   }
 
   .swal2-popup .swal2-actions {

@@ -80,65 +80,65 @@ function openModal(product) {
   Swal.fire({
     title: product.name,
     html: `
-      <div class="product-imgs">
+          <div class="product-imgs">
         <div class="img-display">
-          <div class="img-showcase">
-            <img class="img-pop-up" src="${product.image}" alt="${product.name}">
-            <img class="img-pop-up" src="${product.image2}" alt="${product.name}">
-            <img class="img-pop-up" src="${product.image3}" alt="${product.name}">
-            <img class="img-pop-up" src="${product.image4}" alt="${product.name}">
-          </div>
+            <div class="img-showcase">
+                <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="500" height="500">
+                <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="500" height="500">
+                <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="500" height="500">
+                <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="500" height="500">
+            </div>
         </div>
         <div class="img-select">
-          <div class="img-item">
-              <a href="#" data-id="1">
-                  <img class="img-pop-up" src="${product.image}" alt="${product.name}">
-              </a>
-          </div>
-          <div class="img-item">
-              <a href="#" data-id="2">
-                  <img class="img-pop-up" src="${product.image2}" alt="${product.name}">
-              </a>
-          </div>
-          <div class="img-item">
-              <a href="#" data-id="3">
-                  <img class="img-pop-up" src="${product.image3}" alt="${product.name}">
-              </a>
-          </div>
-          <div class="img-item">
-              <a href="#" data-id="4">
-                  <img class="img-pop-up" src="${product.image4}" alt="${product.name}">
-              </a>
-          </div>
+            <div class="img-item">
+                <a href="#" data-id="1">
+                    <img loading="lazy" class="img-pop-up" src="${product.image}" alt="${product.name}" width="100" height="100">
+                </a>
+            </div>
+            <div class="img-item">
+                <a href="#" data-id="2">
+                    <img loading="lazy" class="img-pop-up" src="${product.image2}" alt="${product.name}" width="100" height="100">
+                </a>
+            </div>
+            <div class="img-item">
+                <a href="#" data-id="3">
+                    <img loading="lazy" class="img-pop-up" src="${product.image3}" alt="${product.name}" width="100" height="100">
+                </a>
+            </div>
+            <div class="img-item">
+                <a href="#" data-id="4">
+                    <img loading="lazy" class="img-pop-up" src="${product.image4}" alt="${product.name}" width="100" height="100">
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="product-content">
+    <div class="product-content">
         <div class="product-div">
-          <div class="product-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>${product.rate}</span>
-          </div>
-          <div class="product-price">
-            <p class="new-price">Precio: <span>₡ ${product.price}</span></p>
-          </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>${product.rate}</span>
+            </div>
+            <div class="product-price">
+                <p class="new-price">Precio: <span>₡ ${product.price}</span></p>
+            </div>
         </div>
         <div class="product-detail">
-          <h3 class="detail">Detalle</h3>
-          <p>${product.description}</p>
-          <ul>
-            <li>Color: <span>${product.color}</span></li>
-            <li>Disponibilidad: <span>En stock</span></li>
-            <li>Categoría: <span>${product.category.name}</span></li>
-            <li>Zona de envío: <span>${product.country}</span></li>
-            <li>Gasto de envío: <span>Gratis</span></li>
-          </ul>
+            <h3 class="detail">Detalle</h3>
+            <p>${product.description}</p>
+            <ul>
+                <li>Color: <span>${product.color}</span></li>
+                <li>Disponibilidad: <span>En stock</span></li>
+                <li>Categoría: <span>${product.category.name}</span></li>
+                <li>Zona de envío: <span>${product.country}</span></li>
+                <li>Gasto de envío: <span>Gratis</span></li>
+            </ul>
         </div>
-      </div>
+    </div>
     `,
     showCloseButton: true,
     showCancelButton: true,

@@ -353,8 +353,6 @@ main {
 }
 
 .producto-imagen {
-  width: 100%;
-  height: auto;
   border-top-left-radius: var(--b-radius);
   border-top-right-radius: var(--b-radius);
   object-fit: cover; /* Controla cómo la imagen se adapta dentro de su contenedor */

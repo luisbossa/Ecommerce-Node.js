@@ -199,6 +199,67 @@ aside {
   padding: 12px;
 }
 
+.header-btn-group {
+  display: none;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.nav-toggle-btn {
+  display: grid;
+  gap: 4px;
+}
+
+.line {
+  width: 10px;
+  height: 3px;
+  background-color: var(--clr-whiteish);
+  border-radius: 5px;
+  transition: 0.25s ease;
+}
+
+.line.middle {
+  width: 20px;
+}
+
+.line.bottom {
+  margin-left: auto;
+}
+
+.nav-toggle-btn.active .line.top {
+  transform: translate(1px, 3px) rotate(45deg);
+}
+
+.nav-toggle-btn.active .line.middle {
+  transform: rotate(-45deg);
+}
+
+.nav-toggle-btn.active .line.bottom {
+  transform: translate(-1px, -3px) rotate(45deg);
+}
+
+.navbar {
+  width: 101%;
+  height: 0;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  color: var(--clr-whiteish);
+  background-color: var(--clr-aside);
+  transform: translateX(-50%);
+  transition: 0.25s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.navbar.active {
+  height: 210px;
+}
+
+.nav-item:not(:last-child) {
+  border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
+}
+
 /*---------------------------------------------------------*/
 
 .btn-category > .bi-hand-index-thumb-fill,
@@ -633,67 +694,6 @@ main {
   }
 }
 
-.header-btn-group {
-  display: flex;
-  align-items: center;
-  margin-left: 6px;
-}
-
-.nav-toggle-btn {
-  display: grid;
-  gap: 4px;
-}
-
-.line {
-  width: 10px;
-  height: 3px;
-  background-color: var(--clr-whiteish);
-  border-radius: 5px;
-  transition: 0.25s ease;
-}
-
-.line.middle {
-  width: 20px;
-}
-
-.line.bottom {
-  margin-left: auto;
-}
-
-.nav-toggle-btn.active .line.top {
-  transform: translate(1px, 3px) rotate(45deg);
-}
-
-.nav-toggle-btn.active .line.middle {
-  transform: rotate(-45deg);
-}
-
-.nav-toggle-btn.active .line.bottom {
-  transform: translate(-1px, -3px) rotate(45deg);
-}
-
-.navbar {
-  width: 101%;
-  height: 0;
-  position: absolute;
-  top: 98%;
-  left: 50%;
-  color: var(--clr-whiteish);
-  background-color: var(--clr-aside);
-  transform: translateX(-50%);
-  transition: 0.25s ease;
-  overflow: hidden;
-  z-index: 1000;
-}
-
-.navbar.active {
-  height: 210px;
-}
-
-.nav-item:not(:last-child) {
-  border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
-}
-
 @media screen and (max-width: 576px) {
   .wrapper {
     display: grid;
@@ -726,6 +726,7 @@ main {
     display: none;
   }
 
+  .header-btn-group.visible,
   .res-cart.visible {
     display: block;
   }

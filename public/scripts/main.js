@@ -271,13 +271,3 @@ cartButtons.forEach((button) => {
   });
 });
 
-function setupCartButton() {
-  const cartButton = document.getElementById("cartBtn2");
-
-  if (cartButton) {
-    cartButton.addEventListener("click", function (event) {
-      event.preventDefault();
-      window.location.href = "/cart";
-    });
-  }
-}

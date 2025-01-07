@@ -27,12 +27,8 @@ function loadProducts(products) {
      alt="${product.name}" 
      width="387" 
      height="490" 
-     srcset="${product.image}?w=300 300w, 
-             ${product.image}?w=600 600w, 
-             ${product.image}?w=900 900w" 
-     sizes="(max-width: 600px) 300px, 
-            (max-width: 1200px) 600px, 
-            900px">
+     loading="lazy">
+
           </div>
           <div class="producto-detalles">
               <h3 class="producto-titulo">${product.name}</h3>

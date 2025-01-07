@@ -7,9 +7,14 @@
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
     <!-- Pre-cargar el archivo de CSS crítico -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" as="style" />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" as="style" />
+    <!-- Cargar estilos no críticos de manera diferida -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" media="print"
+        onload="this.media='all'">
+
 
     <link rel="stylesheet" href="/css/sweetAlert.css" media="all">
     <link rel="stylesheet" href="/css/cart.css" media="all">
@@ -22,7 +27,8 @@
     <div class="wrapper">
         <header class="header-mobile">
             <button id="indexBtn">
-                <img class="logo" src="/images/logo.webp" alt="logo">
+                <!-- Se añaden los atributos width y height para la imagen -->
+                <img class="logo" src="/images/logo.webp" alt="logo" width="150" height="50">
             </button>
             <nav class="navbar" data-navbar>
                 <ul class="navbar-list">
@@ -86,7 +92,8 @@
         <aside>
             <header>
                 <button id="indexBtn">
-                    <img class="logo" src="images/logo.webp" alt="logo">
+                    <!-- Se añaden los atributos width y height para la imagen -->
+                    <img class="logo" src="images/logo.webp" alt="logo" width="150" height="50">
                 </button>
             </header>
             <nav>
@@ -156,5 +163,6 @@
     <script src="/scripts/main.js" defer></script>
     <script src="/scripts/search.js" defer></script>
 </body>
+
 
 </html>

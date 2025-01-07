@@ -337,9 +337,13 @@ div:where(.swal2-container).swal2-center > .swal2-popup .purchase-info {
   div:where(.swal2-container).swal2-center
     > .swal2-popup
     .swal2-html-container {
-    width: auto;
+    max-width: 350px;
     flex-direction: column;
     gap: var(--space-halfunit);
+  }
+
+  div:where(.swal2-container).swal2-center > .swal2-popup .swal2-title {
+    font-size: 20px;
   }
 
   .swal2-popup .product-div {

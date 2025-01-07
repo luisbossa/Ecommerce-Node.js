@@ -149,22 +149,19 @@ function openModal(product) {
       cancelButton: "custom-cancel",
     },
     willOpen: () => {
-      // Deshabilitar el scroll del body al abrir el modal
       document.body.classList.add("modal-open");
     },
     didOpen: () => {
-      // Ejecutar imgSlider() después de que el modal se haya abierto
-      imgSlider(); // Ahora imgSlider se ejecuta cuando el modal está completamente cargado
+      imgSlider(); 
     },
     willClose: () => {
-      // Habilitar el scroll del body al cerrar el modal
       document.body.classList.remove("modal-open");
     },
     scrollbarPadding: false,
     focusConfirm: false,
     preConfirm: () => {
       addCart(product);
-      return false; // Esto evita que se cierre el modal automáticamente
+      return false; // Evita que se cierre el modal automáticamente
     },
   }).then((result) => {
     if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {

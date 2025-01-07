@@ -1,11 +1,13 @@
 // Import packages
 const express = require("express");
+const ejsLayouts = require('express-ejs-layouts');
 const path = require("path");
 const cors = require("cors");
 
 const app = express();
 
 // Middlewares
+app.use(ejsLayouts);
 app.use(express.json());
 app.use(cors());
 

@@ -1,168 +1,60 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
-
-    <!-- Pre-cargar el archivo de CSS crítico -->
-    <!-- Cargar estilos no críticos de manera diferida -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" media="print"
-        onload="this.media='all'">
-
-
-    <link rel="stylesheet" href="/css/sweetAlert.css" media="all">
-    <link rel="stylesheet" href="/css/cart.css" media="all">
-    <link rel="stylesheet" href="/css/index.css" media="all">
-
-    <title>Tienda online</title>
-</head>
-
-<body>
-    <div class="wrapper">
-        <header class="header-mobile">
-            <button id="indexBtn">
-                <!-- Se añaden los atributos width y height para la imagen -->
-                <img class="logo" src="/images/logo.webp" alt="logo" width="150" height="50">
+<nav>
+    <ul class="menu">
+        <div class="search_wrap search_wrap_aside">
+            <input type="text" class="input" placeholder="Buscar.." id="input_aside" />
+        </div>
+        <li>
+            <button id="all" class="btnMenu btn-category active">
+                <i class="ri-arrow-up-wide-line"></i>Productos varios
             </button>
-            <nav class="navbar" data-navbar>
-                <ul class="navbar-list">
-                    <li class="nav-item">
-                        <button id="all" class="btn-menu-mobile btn-category" data-nav-link>
-                            Productos varios
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="shirts" class="btn-menu-mobile btn-category" data-nav-link>
-                            Camisetas
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="coats" class="btn-menu-mobile btn-category" data-nav-link>
-                            Abrigos
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="pants" class="btn-menu-mobile btn-category" data-nav-link>
-                            Pantalones
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button id="shoes" class="btn-menu-mobile btn-category" data-nav-link>
-                            Zapatos
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-wrap">
-                <div class="res-search-box">
-                    <input type="text" class="input" id="res-input" placeholder="Buscar..">
-
-                    <div class="res_search" id="res_search">
-                        <i class="ri-search-line"></i>
-                    </div>
-                </div>
-
-                <button id="cartBtn" class="res-cart">
-                    <i class="ri-shopping-cart-2-fill"></i>
-                    <span id="number2" class="res-number">0</span>
-                </button>
-
-                <div class="header-btn-group" id="header-btn-group">
-                    <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
-                        <span class="line top"></span>
-                        <span class="line middle"></span>
-                        <span class="line bottom"></span>
-                    </button>
-                </div>
-
-                <div class="go-back" id="go-back">
-                    <button id="indexBtn" class="a-back-arrow">
-                        <i class="ri-arrow-left-wide-line"></i>
-                        Atras
-                    </button>
-                </div>
-            </div>
-        </header>
-        <aside>
-            <header>
-                <button id="indexBtn">
-                    <!-- Se añaden los atributos width y height para la imagen -->
-                    <img class="logo" src="images/logo.webp" alt="logo" width="150" height="50">
-                </button>
-            </header>
-            <nav>
-                <ul class="menu" id="menu">
-                    <div class="search_wrap search_wrap_aside">
-                        <input type="text" class="input" placeholder="Buscar.." id="input_aside" />
-                    </div>
-                    <li>
-                        <button id="all" class="btnMenu btn-category active">
-                            <i class="ri-arrow-up-wide-line"></i>Productos varios
-                        </button>
-                    </li>
-                    <li>
-                        <button id="shirts" class="btnMenu btn-category">
-                            <i class="ri-arrow-up-wide-line"></i>Camisetas
-                        </button>
-                    </li>
-                    <li>
-                        <button id="coats" class="btnMenu btn-category">
-                            <i class="ri-arrow-up-wide-line"></i>Abrigos
-                        </button>
-                    </li>
-                    <li>
-                        <button id="pants" class="btnMenu btn-category">
-                            <i class="ri-arrow-up-wide-line"></i>Pantalones
-                        </button>
-                    </li>
-                    <li>
-                        <button id="shoes" class="btnMenu btn-category">
-                            <i class="ri-arrow-up-wide-line"></i>Zapatos
-                        </button>
-                    </li>
-                    <li>
-                        <button id="cartBtn" class="btnMenu btn-cart">
-                            <i class="ri-shopping-cart-2-fill"></i>
-                            Carrito
-                            <span id="number" class="number">0</span>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <footer class="text-footer"> <!-- JS --> </footer>
-        </aside>
-        <main>
-            <div class="main-header">
-                <h2 class="main-title" id="main-title">Productos varios</h2>
-                <div class="search_wrap">
-                    <input type="text" class="input" placeholder="Buscar.." id="input" />
-                </div>
-            </div>
-            <p id="empty-comment" class="empty-comment disabled">No se encontró ningun producto.</p>
-            <button class="go-top-btn">
-                <i class="ri-arrow-up-line"></i>
+        </li>
+        <li>
+            <button id="shirts" class="btnMenu btn-category">
+                <i class="ri-arrow-up-wide-line"></i>Camisetas
             </button>
-            <div class="productContainer" id="productContainer">
-                <!-- JS -->
-            </div>
-            <div class="modal-content">
-                <!-- JS -->
-            </div>
-        </main>
+        </li>
+        <li>
+            <button id="coats" class="btnMenu btn-category">
+                <i class="ri-arrow-up-wide-line"></i>Abrigos
+            </button>
+        </li>
+        <li>
+            <button id="pants" class="btnMenu btn-category">
+                <i class="ri-arrow-up-wide-line"></i>Pantalones
+            </button>
+        </li>
+        <li>
+            <button id="shoes" class="btnMenu btn-category">
+                <i class="ri-arrow-up-wide-line"></i>Zapatos
+            </button>
+        </li>
+        <li>
+            <button id="cartBtn" class="btnMenu btn-cart">
+                <i class="ri-shopping-cart-2-fill"></i>
+                Carrito
+                <span id="number" class="number">0</span>
+            </button>
+        </li>
+    </ul>
+</nav>
+<footer class="text-footer"> <!-- JS --> </footer>
+</aside>
+<main>
+    <div class="main-header">
+        <h2 class="main-title" id="main-title">Productos varios</h2>
+        <div class="search_wrap">
+            <input type="text" class="input" placeholder="Buscar.." id="input" />
+        </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
-    <script src="/scripts/menu.js" defer></script>
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/search.js" defer></script>
-</body>
-
-
-</html>
+    <p id="empty-comment" class="empty-comment disabled">No se encontró ningun producto.</p>
+    <button class="go-top-btn">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <div class="productContainer" id="productContainer">
+        <!-- JS -->
+    </div>
+    <div class="modal-content">
+        <!-- JS -->
+    </div>
+</main>
+</div>

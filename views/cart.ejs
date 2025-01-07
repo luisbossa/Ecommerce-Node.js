@@ -1,190 +1,95 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" as="style" />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" />
-
-    <!-- Hoja de estilo externa con media="all" para que no bloquee la renderización -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
-        integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" media="all" />
-
-    <link rel="stylesheet" type="text/css" href="/css/index.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/css/cart.css" media="all">
-
-    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
-
-    <title>Tienda online</title>
-</head>
-
-
-<body>
-    <div class="wrapper">
-        <header class="header-mobile">
-            <button id="indexBtn">
-                <img class="logo" src="/images/logo.webp" alt="logo">
+<nav>
+    <ul class="menu">
+        <li>
+            <button class="btnMenu btn-category" id="indexBtn">
+                <i class="ri-arrow-left-wide-line"></i>
+                Seguir comprando
             </button>
-            <nav class="menu-mobile" id="menu-mobile">
-                <ul>
-                    <li class="menu-line">
-                        <button id="all" class="btn-menu-mobile btn-category">
-                            Productos varios
-                        </button>
-                    </li>
-                    <li class="menu-line">
-                        <button id="shirts" class="btn-menu-mobile btn-category">
-                            Camisetas
-                        </button>
-                    </li>
-                    <li class="menu-line">
-                        <button id="coats" class="btn-menu-mobile btn-category">
-                            Abrigos
-                        </button>
-                    </li>
-                    <li class="menu-line">
-                        <button id="pants" class="btn-menu-mobile btn-category">
-                            Pantalones
-                        </button>
-                    </li>
-                    <li>
-                        <button id="shoes" class="btn-menu-mobile btn-category">
-                            Zapatos
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-wrap">
-                <div class="res-search-box">
-                    <input type="text" class="input" id="res-input" placeholder="Buscar..">
+        </li>
+        <li>
+            <button class="btnMenu active">
+                <i class="ri-shopping-cart-2-fill"></i>
+                Carrito
+            </button>
+        </li>
+    </ul>
+</nav>
+<footer class="text-footer"> <!-- JS --> </footer>
+</aside>
+<main class="cart-main">
+    <div class="main-header">
+        <h2 class="cart-main-title">Carrito</h2>
+    </div>
+    <div class="container-cart">
+        <div id="empty-comment" class="empty-comment">
 
-                    <div class="res_search" id="res_search">
-                        <i class="ri-search-line"></i>
+            <div class="empty-container">
+                <div class="heading-right-div">
+                    <span class="wizzars-heading">Llena el carrito con lo que más te gusta!</span>
+                    <div class="wizard-circles">
+                        <!-- wizard bar -->
+                        <ul class="wizard-steps">
+                            <li data-target="#step1" class="active">
+                                <span class="step">1</span>
+                            </li>
+
+                            <li data-target="#step2" class="">
+                                <span class="step">2</span>
+                            </li>
+
+                            <li data-target="#step3" class="">
+                                <span class="step">3</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wizard-step-div">
+                        <span class="wizzard-step-title">Haz click en un producto</span>
+                        <span class="wizzard-step-title">Confirma tu compra en el carrito</span>
+                        <span class="wizzard-step-title">Realizar el pago</span>
                     </div>
                 </div>
-
-                <button id="cartBtn" class="res-cart" id="res-cart">
-                    <i class="ri-shopping-cart-2-fill"></i>
-                    <span id="number2" class="res-number">0</span>
-                </button>
-
-                <div class="go-back" id="go-back">
-                    <button id="indexBtn" class="a-back-arrow2">
-                        <i class="ri-arrow-left-wide-line"></i>
-                        ATRAS
+                <div class="no-products">
+                    <div class="empty-wrap">
+                        <i class="empty-cart fa fa-cart-arrow-down"></i>
+                        <div class="empty-heading">
+                            ¡Su carrito esta vacío!
+                        </div>
+                    </div>
+                </div>
+                <div class="btns-emptyCart-div">
+                    <button type="button" id="indexBtn" class="btn btn-b">Ir a
+                        Comprar <i class="ri-shopping-cart-2-fill"></i>
                     </button>
                 </div>
             </div>
-        </header>
-        <aside>
-            <header>
-                <button id="indexBtn">
-                    <img class="logo" src="/images/logo.webp" alt="logo">
+        </div>
+
+        <div id="cart-products" class="cart-products disabled">
+            <!-- JS -->
+        </div>
+
+        <div id="cart-actions" class="cart-actions disabled">
+            <div class="cart-actions-left">
+                <button id="btn-cart-empty" class="btn btn-cart-empty">
+                    Vaciar carrito
                 </button>
-            </header>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <button class="btnMenu btn-category" id="indexBtn">
-                            <i class="ri-arrow-left-wide-line"></i>
-                            Seguir comprando
-                        </button>
-                    </li>
-                    <li>
-                        <button class="btnMenu active">
-                            <i class="ri-shopping-cart-2-fill"></i>
-                            Carrito
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-            <footer class="text-footer"> <!-- JS --> </footer>
-        </aside>
-        <main class="cart-main">
-            <div class="main-header">
-                <h2 class="cart-main-title">Carrito</h2>
             </div>
-            <div class="container-cart">
-                <div id="empty-comment" class="empty-comment">
-
-                    <div class="empty-container">
-                        <div class="heading-right-div">
-                            <span class="wizzars-heading">Llena el carrito con lo que más te gusta!</span>
-                            <div class="wizard-circles">
-                                <!-- wizard bar -->
-                                <ul class="wizard-steps">
-                                    <li data-target="#step1" class="active">
-                                        <span class="step">1</span>
-                                    </li>
-
-                                    <li data-target="#step2" class="">
-                                        <span class="step">2</span>
-                                    </li>
-
-                                    <li data-target="#step3" class="">
-                                        <span class="step">3</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="wizard-step-div">
-                                <span class="wizzard-step-title">Haz click en un producto</span>
-                                <span class="wizzard-step-title">Confirma tu compra en el carrito</span>
-                                <span class="wizzard-step-title">Realizar el pago</span>
-                            </div>
-                        </div>
-                        <div class="no-products">
-                            <div class="empty-wrap">
-                                <i class="empty-cart fa fa-cart-arrow-down"></i>
-                                <div class="empty-heading">
-                                    ¡Su carrito esta vacío!
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btns-emptyCart-div">
-                            <button type="button" id="indexBtn" class="btn btn-b">Ir a
-                                Comprar <i class="ri-shopping-cart-2-fill"></i>
-                            </button>
-                        </div>
-                    </div>
+            <div class="cart-actions-right">
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <p id="total">₡ 0</p>
                 </div>
-
-                <div id="cart-products" class="cart-products disabled">
-                    <!-- JS -->
-                </div>
-
-                <div id="cart-actions" class="cart-actions disabled">
-                    <div class="cart-actions-left">
-                        <button id="btn-cart-empty" class="btn btn-cart-empty">
-                            Vaciar carrito
-                        </button>
-                    </div>
-                    <div class="cart-actions-right">
-                        <div class="cart-total">
-                            <p>Total:</p>
-                            <p id="total">₡ 0</p>
-                        </div>
-                        <button id="btn-cart-buy" class="btn btn-cart-buy">
-                            Comprar ahora
-                        </button>
-                    </div>
-                </div>
-                <p id="bought-cart" class="bought-cart disabled">
-                    Muchas gracias por su compra.
-                    <i class="far fa-laugh-beam"></i>
-                </p>
+                <button id="btn-cart-buy" class="btn btn-cart-buy">
+                    Comprar ahora
+                </button>
             </div>
-        </main>
+        </div>
+        <p id="bought-cart" class="bought-cart disabled">
+            Muchas gracias por su compra.
+            <i class="far fa-laugh-beam"></i>
+        </p>
     </div>
+</main>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="/scripts/cart.js" defer></script>
-</body>
-
-</html>
+<script src="/scripts/cart.js" defer></script>

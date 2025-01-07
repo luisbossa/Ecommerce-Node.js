@@ -1,5 +1,3 @@
-let companyName = "BStudio";
-
 let productsCart = localStorage.getItem("products-in-cart");
 productsCart = JSON.parse(productsCart);
 
@@ -10,11 +8,6 @@ const containerCartBought = document.getElementById("bought-cart");
 let btnDelete = document.querySelectorAll(".cart-product-delete");
 const btnEmpty = document.getElementById("btn-cart-empty");
 const btnBuy = document.getElementById("btn-cart-buy");
-const textFooter = document.querySelector(".text-footer");
-
-/*----------------- FOOTER COMPANY NAME ----------------*/
-
-textFooter.textContent = "© " + companyName;
 
 /*------------ LOAD PRODUCTS CART ---------------*/
 
@@ -58,7 +51,7 @@ function loadProductsCart() {
       </div>
     </div>
 
-      <button class="cart-product-delete" id="${
+      <button type="button" role="button" class="cart-product-delete" id="${
         product.id
       }"><i class="ri-close-circle-fill c"></i></button>
             `;
@@ -126,8 +119,8 @@ function emptyCart() {
     confirmButtonText: "Sí",
     cancelButtonText: "No",
     customClass: {
-      confirmButton: 'custom-confirm-btn',
-      cancelButton: 'custom-cancel-btn',
+      confirmButton: "custom-confirm-btn",
+      cancelButton: "custom-cancel-btn",
     },
     willOpen: () => {
       document.body.classList.add("swal2-shown");

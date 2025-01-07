@@ -4,32 +4,32 @@
             <input type="text" class="input" placeholder="Buscar.." id="input_aside" />
         </div>
         <li>
-            <button id="all" class="btnMenu btn-category active">
+            <button type="button" role="button" id="all" class="btnMenu btn-category active">
                 <i class="ri-arrow-up-wide-line"></i>Productos varios
             </button>
         </li>
         <li>
-            <button id="shirts" class="btnMenu btn-category">
+            <button type="button" role="button" id="shirts" class="btnMenu btn-category">
                 <i class="ri-arrow-up-wide-line"></i>Camisetas
             </button>
         </li>
         <li>
-            <button id="coats" class="btnMenu btn-category">
+            <button type="button" role="button" id="coats" class="btnMenu btn-category">
                 <i class="ri-arrow-up-wide-line"></i>Abrigos
             </button>
         </li>
         <li>
-            <button id="pants" class="btnMenu btn-category">
+            <button type="button" role="button" id="pants" class="btnMenu btn-category">
                 <i class="ri-arrow-up-wide-line"></i>Pantalones
             </button>
         </li>
         <li>
-            <button id="shoes" class="btnMenu btn-category">
+            <button type="button" role="button" id="shoes" class="btnMenu btn-category">
                 <i class="ri-arrow-up-wide-line"></i>Zapatos
             </button>
         </li>
         <li>
-            <button id="cartBtn" class="btnMenu btn-cart">
+            <button type="button" role="button" id="cartBtn" class="btnMenu btn-cart">
                 <i class="ri-shopping-cart-2-fill"></i>
                 Carrito
                 <span id="number" class="number">0</span>
@@ -37,7 +37,7 @@
         </li>
     </ul>
 </nav>
-<footer class="text-footer"> <!-- JS --> </footer>
+<footer class="text-footer">BStudio</footer>
 </aside>
 <main>
     <div class="main-header">
@@ -47,7 +47,7 @@
         </div>
     </div>
     <p id="empty-comment" class="empty-comment disabled">No se encontró ningun producto.</p>
-    <button class="go-top-btn">
+    <button type="button" role="button" class="go-top-btn">
         <i class="ri-arrow-up-line"></i>
     </button>
     <div class="productContainer" id="productContainer">
@@ -58,3 +58,7 @@
     </div>
 </main>
 </div>
+
+<script src="/scripts/main.js" defer></script>
+<script src="/scripts/menu.js" defer></script>
+<script src="/scripts/search.js" defer></script>

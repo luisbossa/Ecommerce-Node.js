@@ -1,5 +1,4 @@
-let products = [],
-  companyName = "BStudio";
+let products = [];
 
 fetch("/scripts/allProducts.json")
   .then((response) => response.json())
@@ -11,11 +10,6 @@ fetch("/scripts/allProducts.json")
 const productContainer = document.getElementById("productContainer");
 let btnAdd = document.querySelectorAll(".btn-cart-add");
 const numbers = document.querySelectorAll("#number, #number2");
-const textFooter = document.querySelector(".text-footer");
-
-/*----------------- FOOTER COMPANY NAME ----------------*/
-
-textFooter.textContent = "© " + companyName;
 
 /*------------ PRODUCTS GRID ---------------*/
 
@@ -152,7 +146,7 @@ function openModal(product) {
       document.body.classList.add("modal-open");
     },
     didOpen: () => {
-      imgSlider(); 
+      imgSlider();
     },
     willClose: () => {
       document.body.classList.remove("modal-open");

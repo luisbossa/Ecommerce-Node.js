@@ -278,18 +278,18 @@ cartButtons.forEach((button) => {
 });
 
 // service-worker.js
-self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open('my-cache').then((cache) => {
+    caches.open("my-cache").then((cache) => {
       return cache.addAll([
-        'https://cdn.jsdelivr.net/npm/sweetalert2@11',
+        "https://cdn.jsdelivr.net/npm/sweetalert2@11",
         // otros archivos estáticos...
       ]);
     })
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       return cachedResponse || fetch(event.request);
@@ -297,4 +297,23 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
+// Cargar los estilos de Remix Icon y Font Awesome solo cuando el contenido sea visible en la página
+document.addEventListener("DOMContentLoaded", function () {
+  if (!document.getElementById("remixicon")) {
+    const linkRemix = document.createElement("link");
+    linkRemix.rel = "stylesheet";
+    linkRemix.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css";
+    linkRemix.media = "all";
+    document.head.appendChild(linkRemix);
+  }
 
+  if (!document.getElementById("font-awesome")) {
+    const linkFontAwesome = document.createElement("link");
+    linkFontAwesome.rel = "stylesheet";
+    linkFontAwesome.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css";
+    linkFontAwesome.media = "all";
+    document.head.appendChild(linkFontAwesome);
+  }
+});

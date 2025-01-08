@@ -155,7 +155,7 @@ aside {
   position: relative;
   width: 101%;
   background-color: var(--clr-whiteish);
-  color: var(--clr-mate);
+  color: var(--clr-aside);
   border-top-left-radius: var(--b-radius);
   border-bottom-left-radius: var(--b-radius);
 }
@@ -339,7 +339,7 @@ main {
 }
 
 .product {
-  width: 100%; 
+  width: 100%;
   max-width: 300px;
   border-radius: var(--b-radius);
   border: 1px solid var(--clr-mate);
@@ -605,12 +605,12 @@ main {
 .header-wrap {
   display: flex;
   align-items: center;
-  gap: 2px;
+  justify-content: center;
+  gap: 4px;
 }
 
 .res-cart {
   display: none;
-  color: var(--clr-whiteish);
   cursor: pointer;
   padding: 5px;
   font-size: 1.3rem;
@@ -618,10 +618,17 @@ main {
 }
 
 .res_search {
-  color: var(--clr-whiteish);
+  width: auto;
+  height: auto;
   cursor: pointer;
-  padding: 5px 5px 5px 3px;
+  padding: 5px 5px 2px 3px;
   font-size: 1.3rem;
+}
+
+.arrow-iconb,
+.cart-icon {
+  width: 19px;
+  height: 19px;
 }
 
 /*---------- RESPONSIVE SLIDE SEARCH BAR ---------*/
@@ -641,9 +648,9 @@ main {
   border-radius: none;
   outline: none;
   border-radius: 0 !important;
-  border-top: 1px solid var(--clr-aside);
-  border-left: 1px solid var(--clr-aside);
-  border-right: 1px solid var(--clr-aside);
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   border-bottom: 1px solid var(--clr-whiteish);
   background: var(--clr-aside);
   transition: 0.4s;
@@ -694,7 +701,6 @@ main {
 .header.active {
   position: fixed;
   top: -85px;
-  box-shadow: var(--shadow-1);
   animation: slideIn 0.5s ease-out forwards;
 }
 

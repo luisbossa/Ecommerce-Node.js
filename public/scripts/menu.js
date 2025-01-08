@@ -3,10 +3,25 @@ const btnCategory = document.querySelectorAll(".btn-category");
 
 btnCategory.forEach((boton) => {
   boton.addEventListener("click", (e) => {
-    searchMessage.classList.add("disabled");
+    if (searchMessage) {
+      searchMessage.classList.add("disabled");
+    }
 
-    btnCategory.forEach((button) => button.classList.remove("active"));
+    btnCategory.forEach((button) => {
+      button.classList.remove("active");
+
+      const img = button.querySelector("img");
+      if (img) {
+        img.src = "/images/arrow-icon.png"; // Imagen predeterminada
+      }
+    });
+
     e.currentTarget.classList.add("active");
+
+    const activeImg = e.currentTarget.querySelector("img");
+    if (activeImg) {
+      activeImg.src = "/images/arrow-iconb.png"; // Imagen cuando está activo
+    }
 
     if (e.currentTarget.id != "all") {
       const productsCategory = products.find(

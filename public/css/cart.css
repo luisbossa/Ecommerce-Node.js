@@ -219,8 +219,9 @@
 
 .empty-cart {
   display: block;
-  width: 200px;
-  height: 200px;
+  width: 12%;
+  min-width: 60px;
+  height: auto;
   object-fit: cover;
   color: var(--clr-blue);
 }

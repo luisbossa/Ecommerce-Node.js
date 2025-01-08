@@ -26,7 +26,9 @@ function loadProductsCart() {
       div.innerHTML = `
       <picture>
         <source srcset="${product.image}" type="image/webp">
-        <img class="cart-product-img" src="${product.image}" alt="${product.name}">
+        <img class="cart-product-img" src="${product.image}" alt="${
+        product.name
+      }">
       </picture>
       
     <div class="cart-content-div">
@@ -55,7 +57,7 @@ function loadProductsCart() {
     <button type="button" class="cart-product-delete" id="${
       product.id
     }" aria-label="Eliminar producto del carrito">
-      <i class="ri-close-circle-fill c" aria-hidden="true"></i>
+       <img loading="lazy" class="cart-icon" src="/images/close.png" width="24" height="24">
     </button>
             `;
       containerCartProducts.append(div);

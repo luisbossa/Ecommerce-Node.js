@@ -340,7 +340,7 @@ main {
 
 .product {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border-radius: var(--b-radius);
   border: 1px solid var(--clr-mate);
   align-items: center;
@@ -438,7 +438,6 @@ main {
 /*--------------------- BACK TO TOP BTN -----------------*/
 
 .go-top-btn {
-  opacity: 0;
   position: fixed;
   font-size: 1.6rem;
   height: 2.3rem;

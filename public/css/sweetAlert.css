@@ -40,7 +40,7 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
   max-height: 98vh;
   padding: var(--space-unit);
   padding-bottom: var(--space-twounits);
-  overflow: hidden;
+  overflow: auto;
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .swal2-html-container {
@@ -129,9 +129,8 @@ div:where(.swal2-container).swal2-center > .swal2-popup .star-pop-up {
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .halfstar-pop-up {
-  width: 14px;
-  height: 14px;
-  margin-bottom: -1px;
+  width: 16px;
+  height: 16px;
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .product-rating span {

@@ -126,15 +126,16 @@
 
 .cart-product-delete {
   width: 22px;
-  height: 22px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1px;
   border-radius: var(--b-round);
   font-size: 1.5rem;
   position: absolute;
   top: -0.7rem;
-  right: -0.9rem;
+  right: -0.8rem;
   outline: 0;
   border: 0;
   white-space: nowrap;
@@ -143,10 +144,6 @@
     inset 0px 2px 1px 0px var(--clr-white);
   background-color: var(--clr-whiteish);
   cursor: pointer;
-}
-
-.cart-product-delete .c {
-  margin-left: 1px;
 }
 
 .cart-actions {

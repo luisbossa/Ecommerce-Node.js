@@ -277,3 +277,24 @@ cartButtons.forEach((button) => {
   });
 });
 
+// service-worker.js
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('my-cache').then((cache) => {
+      return cache.addAll([
+        'https://cdn.jsdelivr.net/npm/sweetalert2@11',
+        // otros archivos estáticos...
+      ]);
+    })
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      return cachedResponse || fetch(event.request);
+    })
+  );
+});
+
+

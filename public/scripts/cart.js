@@ -125,6 +125,7 @@ function emptyCart() {
     customClass: {
       confirmButton: "custom-confirm-btn",
       cancelButton: "custom-cancel-btn",
+      popup: "delete-popup",
     },
     willOpen: () => {
       document.body.classList.add("swal2-shown");

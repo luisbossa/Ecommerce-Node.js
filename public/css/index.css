@@ -340,7 +340,7 @@ main {
 
 .product {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   border-radius: var(--b-radius);
   border: 1px solid var(--clr-mate);
   align-items: center;
@@ -438,6 +438,7 @@ main {
 /*--------------------- BACK TO TOP BTN -----------------*/
 
 .go-top-btn {
+  opacity: 0;
   position: fixed;
   font-size: 1.6rem;
   height: 2.3rem;
@@ -455,6 +456,13 @@ main {
   z-index: 100;
   pointer-events: none;
   transition: 0.5s ease;
+}
+
+.go-top-arrow {
+  opacity: 1;
+  width: 20px;
+  height: 17px;
+  z-index: 101;
 }
 
 .go-top-btn.show {
@@ -666,8 +674,6 @@ main {
   width: 8rem;
   padding: 0 0 0 4px;
 }
-
-/* -------------- RESPONSIVE PRO MENU --------------*/
 
 /* -------------- MEDIA QUERIES --------------*/
 

@@ -43,6 +43,10 @@ div:where(.swal2-container).swal2-center > .swal2-popup {
   overflow: auto;
 }
 
+.delete-popup {
+  width: 500px !important;
+}
+
 div:where(.swal2-container).swal2-center > .swal2-popup .swal2-html-container {
   width: auto;
   display: flex !important;

@@ -182,12 +182,16 @@ function addCart(product) {
     text: "Producto agregado",
     duration: 2000,
     gravity: "top",
-    position: "right",
+    position: "center",
     stopOnFocus: true,
     style: {
       display: "flex",
       alignItems: "center",
       gap: "3px",
+      boxShadow: "inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35)",
+      backgroundImage: "url('/images/bg02.webp')",
+      backgroundSize: "cover", // Esto asegura que la imagen cubra toda el área del Toast
+      backgroundPosition: "center", // Esto asegura que la imagen esté centrada
       background: "linear-gradient(to left, #2c3e50, #3498db)",
       borderRadius: "1.5rem",
       textTransform: "uppercase",
@@ -195,11 +199,14 @@ function addCart(product) {
       padding: "0.7rem",
     },
     offset: {
-      x: "50px",
-      y: "30px",
+      x: "0",
+      y: "20px",
     },
-    onClick: function () {},
-  }).showToast();
+    onClick: function () {
+      // Acción al hacer clic, si es necesario
+    },
+}).showToast();
+
 
   // Ahora ya no necesitamos el `preventDefault()`, porque no estamos trabajando con un evento
   if (productsCart.some((p) => p.id === product.id)) {

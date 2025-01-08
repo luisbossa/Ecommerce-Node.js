@@ -118,7 +118,20 @@ div:where(.swal2-container).swal2-center > .swal2-popup .swal2-title {
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .product-rating {
-  color: var(--clr-yellow);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+div:where(.swal2-container).swal2-center > .swal2-popup .star-pop-up {
+  width: 17px;
+  height: 17px;
+}
+
+div:where(.swal2-container).swal2-center > .swal2-popup .halfstar-pop-up {
+  width: 14px;
+  height: 14px;
+  margin-bottom: -1px;
 }
 
 div:where(.swal2-container).swal2-center > .swal2-popup .product-rating span {

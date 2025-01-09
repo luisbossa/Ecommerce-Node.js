@@ -57,7 +57,7 @@ function loadProductsCart() {
     <button type="button" class="cart-product-delete" id="${
       product.id
     }" aria-label="Eliminar producto del carrito">
-       <img loading="lazy" class="cart-icon" src="/images/close.png" width="24" height="24">
+       <img loading="lazy" class="cart-icon" src="/images/close.png" width="32" height="32">
     </button>
             `;
       containerCartProducts.append(div);
